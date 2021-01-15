@@ -1,5 +1,4 @@
-#Use ctrl-I to load this config first-time
-#Else, use shift-r to reload
+#Use ctrl-I to reload this config
 
 # List of plugins
 set -g @plugin 'tmux-plugins/tpm'
@@ -9,13 +8,10 @@ set -g @plugin 'tmux-plugins/tmux-continuum'
 
 set -g @resurrect-capture-pane-contents 'on'
 set -g @resurrect-strategy-vim 'session'
-set -g @continuum-restore 'on'
 
 set-option -g prefix C-a
 unbind-key C-a
 bind-key C-a send-prefix
-
-bind-key R source-file ~/.tmux.conf \; display-message "tmux.conf reloaded."
 
 set -g base-index 1
 
